@@ -178,7 +178,9 @@ class WTFormToJSONSchema(object):
             'description': field.description,
             'enum': values,
             'ux-widget-choices': list(field.choices),
+            'default': field.default
         }
+        
         if field.flags.required:
             target_def['required'] = True
         return target_def
