@@ -129,6 +129,7 @@ class WTFormToJSONSchema(object):
         target_def = {
             'title': field.label.text,
             'description': field.description,
+            'default': field.default
         }
         if field.flags.required:
             target_def['required'] = True
